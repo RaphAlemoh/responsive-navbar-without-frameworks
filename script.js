@@ -6,7 +6,7 @@ const openMobileNavbar = () => {
   navbarToggle.setAttribute("aria-label", "Close navigation menu.");
 }
 
-function closeMobileNavbar() {
+const closeMobileNavbar = () => {
   navbar.classList.remove("opened");
   navbarToggle.setAttribute("aria-label", "Open navigation menu.");
 }
