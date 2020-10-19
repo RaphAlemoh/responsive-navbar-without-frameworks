@@ -3,20 +3,17 @@ const navbarToggle = navbar.querySelector(".navbar-toggle");
 
 const openMobileNavbar = () => {
   navbar.classList.add("opened");
-  navbarToggle.setAttribute("aria-label", "Close navigation menu.");
+  navbarToggle.setAttribute("aria-label", "Close mobile navigation menu.");
 }
+
 
 const closeMobileNavbar = () => {
   navbar.classList.remove("opened");
-  navbarToggle.setAttribute("aria-label", "Open navigation menu.");
+  navbarToggle.setAttribute("aria-label", "Open mobile navigation menu.");
 }
 
 navbarToggle.addEventListener("click", () => {
-  if (navbar.classList.contains("opened")) {
-    closeMobileNavbar();
-  } else {
-    openMobileNavbar();
-  }
+  (navbar.classList.contains("opened") ? closeMobileNavbar() :  openMobileNavbar())
 });
 
 const navbarMenu = navbar.querySelector(".navbar-menu");
@@ -27,13 +24,3 @@ navbarLinksContainer.addEventListener("click", (clickEvent) => {
 });
 
 navbarMenu.addEventListener("click", closeMobileNavbar);
-
-document
-  .getElementById("options")
-  .querySelectorAll("input[name='navtype']")
-  .forEach((option) => {
-    option.addEventListener("change", (e) => {
-      const navType = e.target.id.split("-").join(" ");
-      navbarMenu.classList = "navbar-menu " + navType;
-    });
-  });
