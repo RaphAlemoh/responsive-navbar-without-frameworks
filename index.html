@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navbar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header id="navbar">
+    <nav class="navbar-container container">
+      <a href="/" class="home-link">
+        <div class="navbar-logo"></div>
+        JSMinna Internship
+      </a>
+      <button type="button" class="navbar-toggle" aria-label="Open navigation menu">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+      </button>
+      <div class="navbar-menu detached">
+        <ul class="navbar-links">
+          <li class="navbar-item"><a class="navbar-link" href="/about">About</a></li>
+          <li class="navbar-item"><a class="navbar-link" href="/blog">Blog</a></li>
+          <li class="navbar-item"><a class="navbar-link" href="/contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+</header>
+<main>
+    <form id="options" class="container">
+        <label for="detached">Detached <input type="radio" checked name="navtype" id="detached" /></label>
+        <label for="attached">Attached <input type="radio" name="navtype" id="attached" /></label>
+        <label for="left-sidebar">Left sidebar <input type="radio" name="navtype" id="left-sidebar" /></label>
+        <label for="right-sidebar">Right sidebar <input type="radio" name="navtype" id="right-sidebar" /></label>
+    </form>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
+
